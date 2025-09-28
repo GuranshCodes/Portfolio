@@ -1,18 +1,21 @@
 :root {
-    --bg-gradient: linear-gradient(135deg, #0a192f, #243b55);
     --primary-color: #007bff;
+    --dark-bg: #0a192f;
     --text-light: #ffffff;
     --text-dark: #8892b0;
     --card-bg: rgba(255, 255, 255, 0.05);
     --nav-bg: rgba(10, 25, 47, 0.95);
+    --bg-gradient: linear-gradient(135deg, #0a192f, #243b55);
 }
 
 body.light-mode {
-    --bg-gradient: linear-gradient(135deg, #e0f7fa, #ffffff);
+    --primary-color: #007bff;
+    --dark-bg: #ffffff;
     --text-light: #0a192f;
-    --text-dark: #444;
+    --text-dark: #444444;
     --card-bg: rgba(0, 0, 0, 0.05);
     --nav-bg: rgba(255, 255, 255, 0.9);
+    --bg-gradient: linear-gradient(135deg, #e0f7fa, #ffffff);
 }
 
 * {
@@ -418,5 +421,33 @@ footer {
 
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        padding: 0 1rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .project-card,
+    .skill-card,
+    .contact-item {
+        padding: 1.5rem;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .nav-links {
+        height: -webkit-fill-available;
     }
 }
