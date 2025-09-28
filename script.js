@@ -2,12 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
   const body = document.body;
-  const toggleBtn = document.getElementById("theme-toggle");
+
+  const toggleBtn = document.createElement("button");
+  toggleBtn.id = "theme-toggle";
+  toggleBtn.innerHTML = "🌙 Dark Mode";
+  document.querySelector("nav").appendChild(toggleBtn);
 
   const setTheme = (mode) => {
     if (mode === "light") {
       body.classList.add("light-mode");
-      toggleBtn.innerHTML = "🌞 Light Mode";
+      toggleBtn.innerHTML = "☀️ Light Mode";
       localStorage.setItem("theme", "light");
     } else {
       body.classList.remove("light-mode");
