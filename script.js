@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
+  const navRight = document.querySelector(".nav-right");
   const body = document.body;
   const toggleBtn = document.getElementById("theme-toggle");
 
   const setTheme = (mode) => {
     if (mode === "light") {
       body.classList.add("light-mode");
-      toggleBtn.innerHTML = "☀️ Light Mode";
+      toggleBtn.innerHTML = "☀️";
       localStorage.setItem("theme", "light");
     } else {
       body.classList.remove("light-mode");
-      toggleBtn.innerHTML = "🌙 Dark Mode";
+      toggleBtn.innerHTML = "🌙";
       localStorage.setItem("theme", "dark");
     }
   };
@@ -32,14 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
+    navRight.classList.toggle("active");
     body.classList.toggle("menu-open");
   });
 
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       hamburger.classList.remove("active");
-      navLinks.classList.remove("active");
+      navRight.classList.remove("active");
       body.classList.remove("menu-open");
     });
   });
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
     if (!e.target.closest("nav")) {
       hamburger.classList.remove("active");
-      navLinks.classList.remove("active");
+      navRight.classList.remove("active");
       body.classList.remove("menu-open");
     }
   });
