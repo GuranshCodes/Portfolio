@@ -2,11 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
   const body = document.body;
-
-  const toggleBtn = document.createElement("button");
-  toggleBtn.id = "theme-toggle";
-  toggleBtn.innerHTML = "🌙 Dark Mode";
-  document.querySelector("nav").appendChild(toggleBtn);
+  const toggleBtn = document.getElementById("theme-toggle");
 
   const setTheme = (mode) => {
     if (mode === "light") {
