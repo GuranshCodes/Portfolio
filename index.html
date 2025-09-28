@@ -26,6 +26,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
         </nav>
     </header>
 
@@ -162,25 +163,6 @@
         <p>&copy; 2025 Guransh. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.querySelector(".hamburger").addEventListener("click", function () {
-            this.classList.toggle("active");
-            document.querySelector(".nav-links").classList.toggle("active");
-        });
-
-        document.querySelectorAll(".nav-links a").forEach((link) => {
-            link.addEventListener("click", () => {
-                document.querySelector(".hamburger").classList.remove("active");
-                document.querySelector(".nav-links").classList.remove("active");
-            });
-        });
-
-        document.addEventListener("click", (e) => {
-            if (!e.target.closest("nav")) {
-                document.querySelector(".hamburger").classList.remove("active");
-                document.querySelector(".nav-links").classList.remove("active");
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
