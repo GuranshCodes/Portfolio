@@ -4,19 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
 
-  // Dark mode default
   if (!localStorage.getItem("theme")) {
     body.classList.add("dark-mode");
     body.style.background = "linear-gradient(135deg, #0a192f, #001f3f)";
+    themeToggle.innerHTML = "☀️";
   } else if (localStorage.getItem("theme") === "light") {
     body.classList.add("light-mode");
     body.style.background = "#f5f5f5";
+    themeToggle.innerHTML = "🌙";
   } else {
     body.classList.add("dark-mode");
     body.style.background = "linear-gradient(135deg, #0a192f, #001f3f)";
+    themeToggle.innerHTML = "☀️";
   }
 
-  // Toggle theme
   themeToggle.addEventListener("click", () => {
     if (body.classList.contains("dark-mode")) {
       body.classList.remove("dark-mode");
@@ -33,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Hamburger menu
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
