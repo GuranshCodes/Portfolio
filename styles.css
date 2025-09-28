@@ -32,7 +32,6 @@ body.light-mode {
     color: var(--text-dark);
 }
 
-/* Header */
 header {
     display: flex;
     align-items: center;
@@ -78,7 +77,6 @@ body.light-mode .nav-links a {
     color: var(--primary-color);
 }
 
-/* Theme Toggle Button */
 #theme-toggle {
     background: var(--card-bg);
     border: none;
@@ -90,6 +88,7 @@ body.light-mode .nav-links a {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    margin-left: 2rem;
 }
 
 #theme-toggle:hover {
@@ -101,7 +100,6 @@ body.light-mode #theme-toggle {
     color: #000;
 }
 
-/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -309,6 +307,62 @@ body.light-mode .project-card p {
     color: var(--text-light);
 }
 
+/* Skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.progress {
+    background: var(--primary-color);
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.percentage {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
 /* Contact */
 .contact-intro {
     text-align: center;
@@ -385,6 +439,9 @@ footer {
     }
     .nav-links.active {
         right: 0;
+    }
+    .nav-links a {
+        font-size: 1.5rem;
     }
     #hero {
         flex-direction: column-reverse;
