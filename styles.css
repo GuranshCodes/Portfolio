@@ -253,17 +253,19 @@ nav {
 }
 .project-card h3 {
     color: var(--primary-color);
+    margin-bottom: 1.2rem;
 }
 .project-card p {
-    margin-top: 0.2rem;
+    margin-top: 1.2rem;
     color: var(--text-dark);
     text-align: justify;
-    max-width: 90%;
+    max-width: 100%;
 }
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-top: 7rem;
     margin-bottom: 0.5rem;
 }
 .project-tech i {
