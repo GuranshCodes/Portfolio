@@ -42,6 +42,7 @@ header {
     background-color: rgba(10, 25, 47, 0.95);
     z-index: 1000;
     backdrop-filter: blur(10px);
+    transition: background 0.3s;
 }
 
 nav {
@@ -69,26 +70,7 @@ nav {
     margin-right: 0.5rem;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: var(--text-light);
-    transition: all 0.3s ease;
-}
-
-/* Nav links and theme toggle */
+/* Nav right: links + theme toggle */
 .nav-right {
     display: flex;
     align-items: center;
@@ -112,17 +94,37 @@ nav {
     color: var(--primary-color);
 }
 
+/* Theme toggle button */
 #theme-toggle {
     font-size: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
     color: var(--text-light);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s;
 }
 
 #theme-toggle:hover {
     transform: scale(1.2);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
 }
 
 /* Hero Section */
@@ -436,6 +438,7 @@ h2 {
 footer {
     text-align: center;
     padding: 3rem 2rem 2rem;
+    color: var(--text-dark);
 }
 
 /* Mobile Adjustments */
