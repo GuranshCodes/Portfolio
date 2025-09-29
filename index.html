@@ -1,189 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guransh's Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guransh's Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="#hero" class="logo">
-                <span class="code-icon">&lt;/&gt;</span> Guransh's Portfolio
-            </a>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+<body class="dark-mode">
+
+<header>
+<nav>
+    <a href="#hero" class="logo"><span class="code-icon">&lt;/&gt;</span> Guransh's Portfolio</a>
+    <ul class="nav-links">
+        <li><a href="#hero">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <button id="theme-toggle">🌙</button>
+    </ul>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+</header>
+
+<main>
+<section id="hero">
+    <div class="hero-content">
+        <div class="intro-text">
+            <h1>Hello, I'm Guransh</h1>
+            <p class="hero-description">Grade 8 student & aspiring developer. I love creating websites and teaching others!</p>
+        </div>
+        <div class="stats">
+            <div class="stat-item"><span class="number">2+</span><p>Years Experience</p></div>
+            <div class="stat-item"><span class="number">4+</span><p>Projects Done</p></div>
+        </div>
+    </div>
+    <div class="profile-container">
+        <div class="profile-image"><img src="profilepicture.jpg" alt="Guransh"></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Excel Calculator</h3>
+            <p>Converts kg → lbs & simplifies invoices.</p>
+            <div class="project-tech">
+                <span class="tech-tag">VBS</span>
+                <span class="tech-tag">Excel</span>
             </div>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#hero">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-            </div>
-        </nav>
-    </header>
+            <a href="https://github.com/GSDhaliwal05/Excel-Formulas" class="github-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>Health Website</h3>
+            <p>School project for health info.</p>
+            <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span></div>
+            <a href="https://github.com/GSDhaliwal05/Health-Wesbite-7OB" class="github-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>Math Website</h3>
+            <p>Interactive math learning.</p>
+            <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span></div>
+            <a href="https://github.com/GSDhaliwal05/Math-Website-7OB" class="github-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio you are viewing now.</p>
+            <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JS</span></div>
+            <a href="https://github.com/GSDhaliwal05/Portfolio" class="github-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+    </div>
+</section>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <div class="intro-text">
-                    <h1>
-                        Nice to meet you,<br />
-                        I'm Guransh
-                    </h1>
-                    <p class="hero-description">
-                        I'm a Grade 8 student and aspiring developer with a passion for
-                        creating awesome websites. With 2 years of experience in HTML and
-                        CSS, I love teaching others and bringing creative ideas to life!
-                    </p>
-                </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="number">2+</span>
-                        <p>Years of Experience</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="number">4+</span>
-                        <p>Projects Completed</p>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-container">
-                <div class="profile-image">
-                    <img src="profilepicture.jpg" alt="Guransh's Profile" />
-                </div>
-            </div>
-        </section>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p class="contact-intro">Feel free to reach out! Always excited to connect.</p>
+    <div class="contact-info">
+        <div class="contact-item">
+            <i class="fas fa-school"></i>
+            <h3>School Email</h3>
+            <a href="mailto:861250@pdsb.net">861250@pdsb.net</a>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <h3>Personal Email</h3>
+            <a href="mailto:guranshd007@gmail.com">guranshd007@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <h3>My GitHub</h3>
+            <a href="https://github.com/GSDhaliwal05" target="_blank">github.com/GSDhaliwal05</a>
+        </div>
+    </div>
+</section>
+</main>
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Excel Calculator</h3>
-                    <p>
-                        A custom Excel calculator for my dad that converts kilograms to pounds. Streamlines invoice creation with instant conversions.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">README</span>
-                        <span class="tech-tag">VBS</span>
-                        <span class="tech-tag">Excel Formulas</span>
-                    </div>
-                    <a href="https://github.com/GSDhaliwal05/Excel-Formulas"
-                       class="github-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
+<footer>
+<p>&copy; 2025 Guransh. All rights reserved.</p>
+</footer>
 
-                <div class="project-card">
-                    <h3>Health Website</h3>
-                    <p>Health-focused informational website created for school project.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                    </div>
-                    <a href="https://github.com/GSDhaliwal05/Health-Wesbite-7OB"
-                       class="github-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
+<script>
+const toggle = document.getElementById("theme-toggle");
 
-                <div class="project-card">
-                    <h3>Math Website</h3>
-                    <p>Interactive mathematics learning platform.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                    </div>
-                    <a href="https://github.com/GSDhaliwal05/Math-Website-7OB"
-                       class="github-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
 
-                <div class="project-card">
-                    <h3>Portfolio Website</h3>
-                    <p>
-                        You're viewing my personal portfolio website — built and hosted right here.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JS</span>
-                    </div>
-                    <a href="https://github.com/GSDhaliwal05/Portfolio"
-                       class="github-link"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </section>
+    if(document.body.classList.contains("dark-mode")) toggle.textContent = "🌙";
+    else toggle.textContent = "☀️";
+});
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p class="contact-intro">
-                Feel free to reach out! I'm always excited to connect with fellow
-                developers.
-            </p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-school"></i>
-                    <h3>School Email</h3>
-                    <a href="mailto:861250@pdsb.net">861250@pdsb.net</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Personal Email</h3>
-                    <a href="mailto:guranshd007@gmail.com">guranshd007@gmail.com</a>
-                </div>
-                <div class="contact-item github-item">
-                    <i class="fab fa-github"></i>
-                    <h3>My GitHub</h3>
-                    <a href="https://github.com/GSDhaliwal05" target="_blank">github.com/GSDhaliwal05</a>
-                </div>
-            </div>
-        </section>
-    </main>
+document.querySelector(".hamburger").addEventListener("click", function () {
+    this.classList.toggle("active");
+    document.querySelector(".nav-links").classList.toggle("active");
+});
 
-    <footer>
-        <p>&copy; 2025 Guransh. All rights reserved.</p>
-    </footer>
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.querySelector(".hamburger").classList.remove("active");
+        document.querySelector(".nav-links").classList.remove("active");
+    });
+});
 
-    <script>
-        document.querySelector(".hamburger").addEventListener("click", function () {
-            this.classList.toggle("active");
-            document.querySelector(".nav-links").classList.toggle("active");
-        });
-
-        document.querySelectorAll(".nav-links a").forEach((link) => {
-            link.addEventListener("click", () => {
-                document.querySelector(".hamburger").classList.remove("active");
-                document.querySelector(".nav-links").classList.remove("active");
-            });
-        });
-
-        document.addEventListener("click", (e) => {
-            if (!e.target.closest("nav")) {
-                document.querySelector(".hamburger").classList.remove("active");
-                document.querySelector(".nav-links").classList.remove("active");
-            }
-        });
-    </script>
+document.addEventListener("click", e => {
+    if (!e.target.closest("nav")) {
+        document.querySelector(".hamburger").classList.remove("active");
+        document.querySelector(".nav-links").classList.remove("active");
+    }
+});
+</script>
 </body>
 </html>
