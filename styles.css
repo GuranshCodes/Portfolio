@@ -273,14 +273,27 @@ body.light-mode .skill-card { background: var(--card-bg-light); border:1px solid
 
 body.light-mode .skill-card h3 { color: var(--text-dark); }
 
-/* Contact */
+/* Contact Section */
+#contact {
+    padding: 5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem; /* spacing between header and intro text */
+    color: var(--primary-color);
+    text-align: center;
+}
+
 .contact-intro {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 3rem;
+    color: var(--text-light);
     font-size: clamp(0.9rem, 2vw, 1.1rem);
-    color: var(--text-dark);
-    padding: 0 1rem;
+    line-height: 1.6;
 }
 
 .contact-info {
@@ -297,23 +310,24 @@ body.light-mode .skill-card h3 { color: var(--text-dark); }
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* adds border for clarity */
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .contact-item:hover {
     transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .contact-item i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 .contact-item h3 {
     color: var(--text-light);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     font-size: clamp(1.1rem, 2vw, 1.3rem);
 }
 
@@ -329,13 +343,11 @@ body.light-mode .skill-card h3 { color: var(--text-dark); }
     color: var(--text-light);
 }
 
-body.light-mode .contact-item {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-body.light-mode .contact-item h3,
-body.light-mode .contact-item a {
-    color: var(--text-dark);
+/* GitHub item centered below the emails */
+.github-item {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 300px;
 }
 
 
