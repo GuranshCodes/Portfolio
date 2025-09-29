@@ -11,25 +11,26 @@
     />
 </head>
 <body>
-  <header>
-  <a href="#hero" class="logo">
-    <span class="code-icon">&lt;/&gt;</span> Guransh's Portfolio
-  </a>
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#hero">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme-toggle">☀️</button>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</header>
-
+    <header>
+        <nav>
+            <a href="#hero" class="logo">
+                <span class="code-icon">&lt;/&gt;</span> Guransh's Portfolio
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#hero">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <section id="hero">
@@ -133,39 +134,56 @@
                 </div>
             </div>
         </section>
-<section id="contact">
-  <div class="contact-header">
-    <a href="#" class="logo">Guransh</a>
-  </div>
-  <p class="contact-intro">
-    Feel free to contact me. I’m happy to hear from you!
-  </p>
-  <div class="contact-info">
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <h3>Personal Email</h3>
-      <a href="mailto:guranshd007@gmail.com">guranshd007@gmail.com</a>
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <h3>School Email</h3>
-      <a href="mailto:861250@pdsb.net">861250@pdsb.net</a>
-    </div>
-    <div class="contact-item">
-      <i class="fab fa-github"></i>
-      <h3>GitHub</h3>
-      <a href="https://github.com/gsdhaliwal05" target="_blank">github.com/gsdhaliwal05</a>
-    </div>
-  </div>
-</section>
 
-
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p class="contact-intro">
+                Feel free to reach out! I'm always excited to connect with fellow
+                developers.
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-school"></i>
+                    <h3>School Email</h3>
+                    <a href="mailto:861250@pdsb.net">861250@pdsb.net</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Personal Email</h3>
+                    <a href="mailto:guranshd007@gmail.com">guranshd007@gmail.com</a>
+                </div>
+                <div class="contact-item github-item">
+                    <i class="fab fa-github"></i>
+                    <h3>My GitHub</h3>
+                    <a href="https://github.com/GSDhaliwal05" target="_blank">github.com/GSDhaliwal05</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Guransh. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", function () {
+            this.classList.toggle("active");
+            document.querySelector(".nav-links").classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+            link.addEventListener("click", () => {
+                document.querySelector(".hamburger").classList.remove("active");
+                document.querySelector(".nav-links").classList.remove("active");
+            });
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest("nav")) {
+                document.querySelector(".hamburger").classList.remove("active");
+                document.querySelector(".nav-links").classList.remove("active");
+            }
+        });
+    </script>
 </body>
 </html>
