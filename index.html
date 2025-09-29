@@ -137,8 +137,7 @@
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <div class="contact-logo">
-            </div>
+            <div class="contact-logo"></div>
             <p class="contact-intro">
                 Feel free to reach out! I'm always excited to connect with fellow
                 developers.
@@ -154,7 +153,7 @@
                     <h3>Personal Email</h3>
                     <a href="mailto:guranshd007@gmail.com">guranshd007@gmail.com</a>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item github-item">
                     <i class="fab fa-github"></i>
                     <h3>My GitHub</h3>
                     <a href="https://github.com/GSDhaliwal05" target="_blank">github.com/GSDhaliwal05</a>
@@ -164,7 +163,7 @@
     </main>
 
     <footer>
-        <p style="text-align:center; margin-top:2rem;">&copy; 2025 Guransh. All rights reserved.</p>
+        <p>&copy; 2025 Guransh. All rights reserved.</p>
     </footer>
 
     <script>
@@ -174,6 +173,7 @@
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
             navLinks.classList.toggle("active");
+            document.body.classList.toggle("menu-open");
         });
 
         // Close mobile menu when link clicked
@@ -181,6 +181,7 @@
             link.addEventListener("click", () => {
                 hamburger.classList.remove("active");
                 navLinks.classList.remove("active");
+                document.body.classList.remove("menu-open");
             });
         });
 
@@ -188,11 +189,7 @@
         const themeToggle = document.getElementById("theme-toggle");
         themeToggle.addEventListener("click", () => {
             document.body.classList.toggle("dark-mode");
-            if(document.body.classList.contains("dark-mode")) {
-                themeToggle.textContent = "🌙";
-            } else {
-                themeToggle.textContent = "☀️";
-            }
+            themeToggle.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
         });
     </script>
 </body>
