@@ -9,7 +9,6 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,9 +21,9 @@
                     <li><a href="#hero">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><button id="theme-open">Themes</button></li>
                 </ul>
                 <button id="theme-toggle">🌙</button>
-                <button id="custom-theme-btn">🎨</button>
             </div>
             <div class="hamburger">
                 <span></span>
@@ -40,13 +39,20 @@
                 <div class="intro-text">
                     <h1>
                         Nice to meet you,<br />
-                        I'm Guransh
+                        I'm Guransh A
                     </h1>
+                    <h2 class="typed-subtitle"></h2>
                     <p class="hero-description">
                         I'm a Grade 8 student and aspiring developer with a passion for
-                        creating awesome websites. My birthday is March 5, 2012. With 2 years of experience in HTML and
+                        creating awesome websites. With 2 years of experience in HTML and
                         CSS, I love teaching others and bringing creative ideas to life!
                     </p>
+                    <div class="hero-skills">
+                        <img src="html-logo.png" alt="HTML" title="HTML" />
+                        <img src="css-logo.png" alt="CSS" title="CSS" />
+                        <img src="excel-logo.png" alt="Excel Formulas" title="Excel Formulas" />
+                        <img src="math-logo.png" alt="Math" title="Math" />
+                    </div>
                 </div>
                 <div class="stats">
                     <div class="stat-item">
@@ -56,10 +62,6 @@
                     <div class="stat-item">
                         <span class="number">4+</span>
                         <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-item">
-                        <span class="number">5+</span>
-                        <p>Skills Learned</p>
                     </div>
                 </div>
             </div>
@@ -79,8 +81,6 @@
                         A custom Excel calculator for my dad that converts kilograms to pounds. Streamlines invoice creation with instant conversions.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">README</span>
-                        <span class="tech-tag">VBS</span>
                         <span class="tech-tag">Excel Formulas</span>
                     </div>
                     <a href="https://github.com/GSDhaliwal05/Excel-Formulas"
@@ -90,6 +90,7 @@
                         <i class="fab fa-github"></i> View on GitHub
                     </a>
                 </div>
+
                 <div class="project-card">
                     <h3>Health Website</h3>
                     <p>Health-focused informational website created for school project.</p>
@@ -104,6 +105,7 @@
                         <i class="fab fa-github"></i> View on GitHub
                     </a>
                 </div>
+
                 <div class="project-card">
                     <h3>Math Website</h3>
                     <p>Interactive mathematics learning platform.</p>
@@ -118,6 +120,7 @@
                         <i class="fab fa-github"></i> View on GitHub
                     </a>
                 </div>
+
                 <div class="project-card">
                     <h3>Portfolio Website</h3>
                     <p>
@@ -140,51 +143,51 @@
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <div class="contact-cards">
-                <div class="contact-card">
+            <div class="contact-info">
+                <div class="contact-item">
                     <i class="fas fa-school"></i>
                     <h3>School Email</h3>
                     <a href="mailto:861250@pdsb.net">861250@pdsb.net</a>
                 </div>
-                <div class="contact-card">
+                <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <h3>Personal Email</h3>
                     <a href="mailto:guranshd007@gmail.com">guranshd007@gmail.com</a>
                 </div>
-                <div class="contact-card">
+                <div class="contact-item github-item">
                     <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
+                    <h3>My GitHub</h3>
                     <a href="https://github.com/GSDhaliwal05" target="_blank">github.com/GSDhaliwal05</a>
                 </div>
-                <div class="contact-card">
-                    <i class="fab fa-instagram"></i>
-                    <h3>Instagram</h3>
-                    <a href="#" target="_blank">@yourusername</a>
+                <div class="contact-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Birthday</h3>
+                    <p>March 5, 2012</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Custom Theme Modal -->
+    <footer>
+        <p>&copy; 2025 Guransh. All rights reserved.</p>
+    </footer>
+
+    <!-- Theme Modal -->
     <div id="theme-modal" class="theme-modal">
         <div class="theme-content">
-            <h2>Create Custom Theme</h2>
-            <label>Background Start Color:<input type="color" id="bg-start" value="#0a192f"></label>
-            <label>Background End Color:<input type="color" id="bg-end" value="#001528"></label>
-            <label>Primary Text Color:<input type="color" id="text-primary" value="#ffffff"></label>
-            <label>Secondary Text Color:<input type="color" id="text-secondary" value="#8892b0"></label>
-            <label>Accent Color:<input type="color" id="accent" value="#007bff"></label>
-            <div class="theme-preview" id="theme-preview">Theme Preview</div>
+            <h3>Create Custom Theme</h3>
+            <label>Background Start Color: <input type="color" id="bg-start" value="#0a192f"></label>
+            <label>Background End Color: <input type="color" id="bg-end" value="#007bff"></label>
+            <label>Primary Text Color: <input type="color" id="primary-text" value="#ffffff"></label>
+            <label>Secondary Text Color: <input type="color" id="secondary-text" value="#8892b0"></label>
+            <label>Accent Color: <input type="color" id="accent-color" value="#00a8ff"></label>
+            <div class="theme-preview">This is how your theme will look</div>
             <div class="theme-buttons">
                 <button id="cancel-theme">Cancel</button>
                 <button id="apply-theme">Apply Theme</button>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Guransh. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
