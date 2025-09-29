@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
+    const themeToggle = document.getElementById("theme-toggle");
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
+    const customThemeBtn = document.getElementById("custom-theme-btn");
+    const themeModal = document.getElementById("theme-modal");
+    const cancelTheme = document.getElementById("cancel-theme");
+    const applyTheme = document.getElementById("apply-theme");
 
     // Default dark mode
     if (!localStorage.getItem("theme")) {
@@ -30,14 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Hamburger menu toggle
+    // Hamburger
     hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navLinks.classList.toggle("active");
         body.classList.toggle("menu-open");
     });
 
-    // Close menu when clicking a nav link
     document.querySelectorAll(".nav-links a").forEach(link => {
         link.addEventListener("click", () => {
             hamburger.classList.remove("active");
@@ -46,12 +49,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Close menu when clicking outside
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest("header")) {
-            hamburger.classList.remove("active");
-            navLinks.classList.remove("active");
-            body.classList.remove("menu-open");
-        }
+    // Custom Theme Modal
+    customThemeBtn.addEventListener("click", () => {
+        themeModal.classList.add("active");
+    });
+    cancelTheme.addEventListener("click", () => {
+        themeModal.classList.remove("active");
+    });
+
+    applyTheme.addEventListener("click", () => {
+        const bgStart = document.getElementById("bg-start").value;
+        const bgEnd = document.getElementById("bg-end").value;
+        const textPrimary = document.getElementById("text-primary").value;
+        const textSecondary = document.getElementById("text-secondary").value;
+        const accent = document.getElementById("accent").value;
+
+        document.documentElement.style.setProperty('--dark-bg-start', bgStart);
+        document.documentElement.style.setProperty('--dark-bg-end', bgEnd);
+        document.documentElement.style.setProperty('--text-light', textPrimary);
+        document.documentElement.style.setProperty('--text-dark', textSecondary);
+        document.documentElement.style.setProperty('--primary-color', accent);
+
+        themeModal.classList.remove("active");
     });
 });
