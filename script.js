@@ -105,15 +105,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function typeWriter() {
         const currentWord = words[wordIndex];
         if (isDeleting) {
-            typedSubtitle.textContent = currentWord.substring(0, charIndex - 1);
+            typedSubtitle.innerHTML = currentWord.substring(0, charIndex - 1) + '&nbsp;'.repeat(10);
             charIndex--;
         } else {
-            typedSubtitle.textContent = currentWord.substring(0, charIndex + 1);
+            typedSubtitle.innerHTML = currentWord.substring(0, charIndex + 1) + '&nbsp;'.repeat(10);
             charIndex++;
         }
-
-        // Prevent shrinking by adding a non-breaking space padding to keep width consistent
-        typedSubtitle.innerHTML = typedSubtitle.textContent + '&nbsp;'.repeat(10);
 
         if (!isDeleting && charIndex === currentWord.length) {
             isDeleting = true;
