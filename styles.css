@@ -292,6 +292,32 @@ nav {
     background: #0056b3;
 }
 
+/* Collaborator Section */
+.collaborator-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.collaborator-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,123,255,0.2);
+}
+.collaborator-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.collaborator-section p {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+#collaborator {
+    padding: 5rem 5%;
+}
+
 /* Future Goals */
 #future-goals {
     padding: 5rem 5%;
