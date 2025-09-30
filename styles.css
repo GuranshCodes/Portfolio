@@ -12,7 +12,6 @@
     --font-secondary: 'Roboto', sans-serif;
 }
 
-/* Dark/Light mode overrides */
 body.light-mode {
     --dark-bg-start: #ffffff;
     --dark-bg-end: #f0f0f0;
@@ -21,7 +20,6 @@ body.light-mode {
     --card-bg: rgba(0, 0, 0, 0.05);
 }
 
-/* Global styles */
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +37,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Header */
 header {
     position: fixed;
     top: 0;
@@ -106,7 +103,6 @@ nav {
     color: white;
 }
 
-/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -121,7 +117,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* Hero */
 #hero {
     display: flex;
     justify-content: space-between;
@@ -164,14 +159,30 @@ nav {
 .typed-subtitle {
     font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--primary-color);
-    border-right: 2px solid var(--primary-color);
-    animation: blink 1s infinite;
     display: inline-block;
     min-width: 200px;
+}
+.cursor {
+    border-right: 1.5px solid var(--primary-color);
+    animation: blink 1s step-start infinite;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline;
+    vertical-align: bottom;
+}
+.cursor.flicker {
+    animation: flicker 0.15s alternate infinite;
+    margin-left: 0;
+    padding-left: 0;
 }
 @keyframes blink {
     0%, 50% { border-color: transparent; }
     51%, 100% { border-color: var(--primary-color); }
+}
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 .hero-skills {
     display: flex;
@@ -205,7 +216,6 @@ nav {
     font-weight: 500;
 }
 
-/* Profile Image */
 .profile-container {
     flex: 1;
     display: flex;
@@ -230,7 +240,6 @@ nav {
     transform: scale(1.05);
 }
 
-/* Projects */
 #projects {
     padding: 5rem 5%;
 }
@@ -292,7 +301,6 @@ nav {
     background: #0056b3;
 }
 
-/* Collaborator Section */
 .collaborator-section {
     background: var(--card-bg);
     padding: 2rem;
@@ -318,7 +326,6 @@ nav {
     padding: 5rem 5%;
 }
 
-/* Future Goals */
 #future-goals {
     padding: 5rem 5%;
     background: linear-gradient(135deg, var(--dark-bg-start), var(--dark-bg-end));
@@ -350,7 +357,6 @@ nav {
     font-weight: 500;
 }
 
-/* Clubs and Activities */
 #clubs-activities {
     padding: 5rem 5%;
     background: linear-gradient(135deg, var(--dark-bg-start), var(--dark-bg-end));
@@ -382,7 +388,6 @@ nav {
     font-weight: 500;
 }
 
-/* Contact */
 #contact {
     padding: 5rem 5%;
 }
@@ -440,7 +445,6 @@ nav {
     color: var(--accent-color);
 }
 
-/* Preset theme buttons */
 .preset-buttons {
     display: flex;
     gap: 0.5rem;
@@ -461,7 +465,6 @@ nav {
     color: white;
 }
 
-/* Themes button in navbar */
 #theme-open {
     background-color: var(--primary-color);
     color: white;
@@ -473,14 +476,12 @@ nav {
     background-color: #0056b3;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 3rem 2rem 2rem;
     color: var(--text-dark);
 }
 
-/* Modal Theme */
 .theme-modal {
     display: none;
     position: fixed;
@@ -552,7 +553,6 @@ section {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* Responsive */
 @media(max-width:768px){
     .hero-content{max-width:100%;}
     #hero{flex-direction:column-reverse;text-align:center;}

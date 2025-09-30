@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const applyTheme = document.getElementById("apply-theme");
     const typedSubtitle = document.querySelector(".typed-subtitle");
 
-    // Preset themes with dark and light variants
     const presetThemes = {
         moon: {
             dark: {
@@ -93,10 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Current selected preset theme key
     let currentPreset = "moon";
 
-    // Typed subtitle animation with more words and styling like the example website
     const words = ["Developer", "Programmer", "Tech Enthusiast"];
     let wordIndex = 0;
     let charIndex = 0;
@@ -126,7 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeWriter();
 
-    // Apply a preset theme variant (dark or light)
     function applyPresetTheme(presetKey, variant) {
         const theme = presetThemes[presetKey][variant];
         document.documentElement.style.setProperty('--dark-bg-start', theme.bgStart);
@@ -136,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty('--primary-color', theme.accent);
     }
 
-    // Load theme from localStorage or default
     function loadTheme() {
         const savedPreset = localStorage.getItem("presetTheme");
         const savedVariant = localStorage.getItem("themeVariant");
@@ -151,7 +146,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 themeToggle.innerHTML = "🌙";
             }
         } else {
-            // Default to moon dark
             currentPreset = "moon";
             applyPresetTheme(currentPreset, "dark");
             body.classList.remove("light-mode");
@@ -161,16 +155,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadTheme();
 
-    // Toggle dark/light mode with preset
     themeToggle.addEventListener("click", () => {
         if (body.classList.contains("light-mode")) {
-            // Switch to dark
             body.classList.remove("light-mode");
             applyPresetTheme(currentPreset, "dark");
             themeToggle.innerHTML = "🌙";
             localStorage.setItem("themeVariant", "dark");
         } else {
-            // Switch to light
             body.classList.add("light-mode");
             applyPresetTheme(currentPreset, "light");
             themeToggle.innerHTML = "☀️";
@@ -178,7 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Hamburger
     hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         navLinks.classList.toggle("active");
@@ -193,9 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Custom Theme Modal
     customThemeBtn.addEventListener("click", () => {
-        // Set current values to inputs
         const currentBgStart = getComputedStyle(document.documentElement).getPropertyValue('--dark-bg-start').trim();
         const currentBgEnd = getComputedStyle(document.documentElement).getPropertyValue('--dark-bg-end').trim();
         const currentTextPrimary = getComputedStyle(document.documentElement).getPropertyValue('--text-light').trim();
@@ -212,12 +200,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     cancelTheme.addEventListener("click", () => {
-        // Restore previous theme
         loadTheme();
         themeModal.classList.remove("active");
     });
 
-    // Live preview
     const inputs = document.querySelectorAll('#theme-modal input');
     inputs.forEach(input => {
         input.addEventListener('input', () => {
@@ -257,13 +243,11 @@ document.addEventListener("DOMContentLoaded", () => {
         themeModal.classList.remove("active");
     });
 
-    // Preset theme buttons
     const presetButtons = document.querySelectorAll(".preset-btn");
     presetButtons.forEach(button => {
         button.addEventListener("click", () => {
             const selectedTheme = button.getAttribute("data-theme");
             currentPreset = selectedTheme;
-            // Apply current variant or default to dark
             const variant = body.classList.contains("light-mode") ? "light" : "dark";
             applyPresetTheme(currentPreset, variant);
             localStorage.setItem("presetTheme", currentPreset);
