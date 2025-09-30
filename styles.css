@@ -291,6 +291,70 @@ nav {
     background: #0056b3;
 }
 
+/* Future Goals */
+#future-goals {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, var(--dark-bg-start), var(--dark-bg-end));
+    border-radius: 15px;
+}
+.goals-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.goal-item {
+    background: rgba(0, 123, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+.goal-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.4);
+}
+.goal-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.goal-item p {
+    color: var(--text-light);
+    text-align: justify;
+    font-weight: 500;
+}
+
+/* Clubs and Activities */
+#clubs-activities {
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, var(--dark-bg-start), var(--dark-bg-end));
+    border-radius: 15px;
+}
+.clubs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.club-item {
+    background: rgba(0, 123, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+}
+.club-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.3);
+}
+.club-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.club-item p {
+    color: var(--text-light);
+    text-align: justify;
+    font-weight: 500;
+}
+
 /* Contact */
 #contact {
     padding: 5rem 5%;

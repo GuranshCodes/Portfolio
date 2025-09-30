@@ -96,8 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Current selected preset theme key
     let currentPreset = "moon";
 
-    // Typed subtitle animation
-    const words = ["Programmer", "Developer"];
+    // Typed subtitle animation with more words and styling like the example website
+    const words = ["Developer", "Programmer", "Tech Enthusiast"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -112,9 +112,12 @@ document.addEventListener("DOMContentLoaded", () => {
             charIndex++;
         }
 
+        // Prevent shrinking by adding a non-breaking space padding to keep width consistent
+        typedSubtitle.innerHTML = typedSubtitle.textContent + '&nbsp;'.repeat(10);
+
         if (!isDeleting && charIndex === currentWord.length) {
             isDeleting = true;
-            setTimeout(typeWriter, 1000);
+            setTimeout(typeWriter, 1500);
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
