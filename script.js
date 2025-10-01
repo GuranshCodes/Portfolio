@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
-    const themeToggle = document.getElementById("theme-toggle");
+    const themeSwitch = document.getElementById('theme-switch');
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
     const customThemeBtn = document.getElementById("theme-open");
     const themeModal = document.getElementById("theme-modal");
     const cancelTheme = document.getElementById("cancel-theme");
-    const applyTheme = document.getElementById("apply-theme");
+    const applyThemeBtn = document.getElementById("apply-theme");
     const typedSubtitle = document.querySelector(".typed-subtitle");
 
     const presetThemes = {
@@ -89,6 +89,86 @@ document.addEventListener("DOMContentLoaded", () => {
                 textSecondary: "#145214",
                 accent: "#4d994d"
             }
+        },
+        lavender: {
+            dark: {
+                bgStart: "#4b3f72",
+                bgEnd: "#6a5d8f",
+                textPrimary: "#e6e6fa",
+                textSecondary: "#c8c8ff",
+                accent: "#b497bd"
+            },
+            light: {
+                bgStart: "#f3e8ff",
+                bgEnd: "#dcd0ff",
+                textPrimary: "#4b3f72",
+                textSecondary: "#6a5d8f",
+                accent: "#b497bd"
+            }
+        },
+        coral: {
+            dark: {
+                bgStart: "#7f3f3f",
+                bgEnd: "#a65a5a",
+                textPrimary: "#ffe6e6",
+                textSecondary: "#ffb3b3",
+                accent: "#ff6666"
+            },
+            light: {
+                bgStart: "#fff0f0",
+                bgEnd: "#ffd6d6",
+                textPrimary: "#7f3f3f",
+                textSecondary: "#a65a5a",
+                accent: "#ff6666"
+            }
+        },
+        teal: {
+            dark: {
+                bgStart: "#004d4d",
+                bgEnd: "#007373",
+                textPrimary: "#ccffff",
+                textSecondary: "#99ffff",
+                accent: "#33cccc"
+            },
+            light: {
+                bgStart: "#e0ffff",
+                bgEnd: "#b3ffff",
+                textPrimary: "#004d4d",
+                textSecondary: "#007373",
+                accent: "#33cccc"
+            }
+        },
+        amber: {
+            dark: {
+                bgStart: "#664d00",
+                bgEnd: "#997300",
+                textPrimary: "#fff8cc",
+                textSecondary: "#ffeb99",
+                accent: "#ffcc33"
+            },
+            light: {
+                bgStart: "#fff9e6",
+                bgEnd: "#fff2b3",
+                textPrimary: "#664d00",
+                textSecondary: "#997300",
+                accent: "#ffcc33"
+            }
+        },
+        plum: {
+            dark: {
+                bgStart: "#4b004b",
+                bgEnd: "#6a006a",
+                textPrimary: "#e6ccff",
+                textSecondary: "#c8aaff",
+                accent: "#b366b3"
+            },
+            light: {
+                bgStart: "#f3e6f3",
+                bgEnd: "#dcd0dc",
+                textPrimary: "#4b004b",
+                textSecondary: "#6a006a",
+                accent: "#b366b3"
+            }
         }
     };
 
@@ -132,41 +212,93 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty('--primary-color', theme.accent);
     }
 
+    function updateThemePreview() {
+        const bgStart = getComputedStyle(document.documentElement).getPropertyValue('--dark-bg-start').trim();
+        const bgEnd = getComputedStyle(document.documentElement).getPropertyValue('--dark-bg-end').trim();
+        const textPrimary = getComputedStyle(document.documentElement).getPropertyValue('--text-light').trim();
+        const textSecondary = getComputedStyle(document.documentElement).getPropertyValue('--text-dark').trim();
+        const accent = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+
+        const themePreview = document.querySelector('.theme-preview');
+        if (themePreview) {
+            themePreview.style.background = `linear-gradient(${bgStart}, ${bgEnd})`;
+            themePreview.style.color = textPrimary;
+            themePreview.style.border = `2px solid ${accent}`;
+        }
+    }
+
+    function applyTheme(presetKey, variant) {
+        console.log("Applying theme:", presetKey, variant);
+        currentPreset = presetKey;
+        localStorage.setItem("presetTheme", currentPreset);
+        localStorage.setItem("themeVariant", variant);
+        applyPresetTheme(currentPreset, variant);
+
+        // Update the theme switch icon color to the current theme accent color
+        const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+        if (themeSwitch) {
+            themeSwitch.querySelectorAll('svg').forEach(svg => {
+                svg.style.fill = accentColor;
+            });
+        }
+
+        updateThemePreview();
+
+        if (variant === "light") {
+            body.classList.add("light-mode");
+            animateToSun();
+        } else {
+            body.classList.remove("light-mode");
+            animateToMoon();
+        }
+    }
+
     function loadTheme() {
         const savedPreset = localStorage.getItem("presetTheme");
         const savedVariant = localStorage.getItem("themeVariant");
         if (savedPreset && savedVariant && presetThemes[savedPreset]) {
-            currentPreset = savedPreset;
-            applyPresetTheme(currentPreset, savedVariant);
-            if (savedVariant === "light") {
-                body.classList.add("light-mode");
-                themeToggle.innerHTML = "☀️";
-            } else {
-                body.classList.remove("light-mode");
-                themeToggle.innerHTML = "🌙";
-            }
+            applyTheme(savedPreset, savedVariant);
         } else {
-            currentPreset = "moon";
-            applyPresetTheme(currentPreset, "dark");
-            body.classList.remove("light-mode");
-            themeToggle.innerHTML = "🌙";
+            applyTheme("moon", "dark");
         }
+    }
+
+    // SVG path data for moon and sun shapes
+    const moonPath = "M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z";
+    const sunPath = "M12 4.354a7.646 7.646 0 1 0 0 15.292 7.646 7.646 0 0 0 0-15.292zm0 13.292a5.646 5.646 0 1 1 0-11.292 5.646 5.646 0 0 1 0 11.292z";
+
+    let themeIconPath;
+
+    function animateToSun() {
+        if (themeIconPath) {
+            themeIconPath.setAttribute('d', sunPath);
+        }
+    }
+
+    function animateToMoon() {
+        if (themeIconPath) {
+            themeIconPath.setAttribute('d', moonPath);
+        }
+    }
+
+    themeIconPath = document.getElementById('theme-icon-path');
+
+    // Initialize icon based on current theme
+    if (localStorage.getItem('themeVariant') === 'light') {
+        animateToSun();
+    } else {
+        animateToMoon();
     }
 
     loadTheme();
 
-    themeToggle.addEventListener("click", () => {
-        if (body.classList.contains("light-mode")) {
-            body.classList.remove("light-mode");
-            applyPresetTheme(currentPreset, "dark");
-            themeToggle.innerHTML = "🌙";
-            localStorage.setItem("themeVariant", "dark");
-        } else {
-            body.classList.add("light-mode");
-            applyPresetTheme(currentPreset, "light");
-            themeToggle.innerHTML = "☀️";
-            localStorage.setItem("themeVariant", "light");
-        }
+    themeSwitch.addEventListener('click', () => {
+        console.log("Dark mode toggle clicked");
+        const currentThemeVariant = localStorage.getItem('themeVariant') || 'dark';
+        console.log("Current theme variant:", currentThemeVariant);
+        const newVariant = currentThemeVariant === 'light' ? 'dark' : 'light';
+        console.log("New variant:", newVariant);
+        applyTheme(currentPreset, newVariant);
     });
 
     hamburger.addEventListener("click", () => {
@@ -197,6 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("accent-color").value = currentAccent;
 
         themeModal.classList.add("active");
+        console.log("Theme modal opened");
     });
 
     cancelTheme.addEventListener("click", () => {
@@ -218,10 +351,12 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement.style.setProperty('--text-light', textPrimary);
             document.documentElement.style.setProperty('--text-dark', textSecondary);
             document.documentElement.style.setProperty('--primary-color', accent);
+
+            updateThemePreview();
         });
     });
 
-    applyTheme.addEventListener("click", () => {
+    applyThemeBtn.addEventListener("click", () => {
         const bgStart = document.getElementById("bg-start").value;
         const bgEnd = document.getElementById("bg-end").value;
         const textPrimary = document.getElementById("primary-text").value;
@@ -238,7 +373,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.setItem("customTheme", JSON.stringify(customThemeData));
         localStorage.removeItem("presetTheme");
-        localStorage.removeItem("themeVariant");
+        // Update themeVariant based on light-mode class
+        const variant = body.classList.contains("light-mode") ? "light" : "dark";
+        localStorage.setItem("themeVariant", variant);
 
         themeModal.classList.remove("active");
     });
@@ -249,9 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const selectedTheme = button.getAttribute("data-theme");
             currentPreset = selectedTheme;
             const variant = body.classList.contains("light-mode") ? "light" : "dark";
-            applyPresetTheme(currentPreset, variant);
-            localStorage.setItem("presetTheme", currentPreset);
-            localStorage.setItem("themeVariant", variant);
+            applyTheme(currentPreset, variant);
             themeModal.classList.remove("active");
         });
     });

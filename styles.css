@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
 
 :root {
     --primary-color: #007bff;
@@ -10,6 +10,49 @@
     --accent-color: #007bff;
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
+    --base-color: #f4f4f4;
+    --base-variant: #ffffff;
+    --text-color: #333;
+    --switch-bg: #ccc;
+}
+
+.dark-mode {
+    --base-color: #1e1e1e;
+    --base-variant: #2d2d2d;
+    --text-color: #ffffff;
+    --switch-bg: #555;
+}
+
+/* Removed old switch toggle styles for dark mode button */
+
+#theme-switch {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#theme-switch svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--text-color);
+    transition: stroke 0.3s ease;
+}
+
+#theme-switch:hover {
+    transform: scale(1.1);
+}
+
+#theme-switch:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 body.light-mode {
@@ -516,6 +559,30 @@ footer {
     background: var(--card-bg);
     text-align: center;
     margin: 1rem 0;
+}
+
+.theme-preview .preview-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.theme-preview .preview-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.theme-preview .preview-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 .theme-buttons {
     display: flex;
