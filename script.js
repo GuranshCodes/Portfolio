@@ -16,14 +16,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#001528",
                 textPrimary: "#ffffff",
                 textSecondary: "#8892b0",
-                accent: "#00a8ff"
+                accent: "#00a8ff",
+                borderColor: "#444",
+                shadowColor: "rgba(0, 0, 0, 0.5)",
+                buttonBgColor: "#007bff",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#e0e7ff",
                 bgEnd: "#c7d2fe",
                 textPrimary: "#1e293b",
                 textSecondary: "#475569",
-                accent: "#3b82f6"
+                accent: "#3b82f6",
+                borderColor: "#ccc",
+                shadowColor: "rgba(0, 0, 0, 0.1)",
+                buttonBgColor: "#3b82f6",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "16px"
             }
         },
         neon: {
@@ -32,14 +44,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#1a1a1a",
                 textPrimary: "#39ff14",
                 textSecondary: "#0aff0a",
-                accent: "#00ffea"
+                accent: "#00ffea",
+                borderColor: "#39ff14",
+                shadowColor: "rgba(57, 255, 20, 0.3)",
+                buttonBgColor: "#00ffea",
+                buttonTextColor: "#0f0f0f",
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#d0f0d0",
                 bgEnd: "#a0e0a0",
                 textPrimary: "#004400",
                 textSecondary: "#006600",
-                accent: "#00ffea"
+                accent: "#00ffea",
+                borderColor: "#00aa00",
+                shadowColor: "rgba(0, 170, 0, 0.2)",
+                buttonBgColor: "#00ffea",
+                buttonTextColor: "#004400",
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "16px"
             }
         },
         sunset: {
@@ -48,14 +72,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#4b2e2e",
                 textPrimary: "#ffccbb",
                 textSecondary: "#ff9988",
-                accent: "#ff6655"
+                accent: "#ff6655",
+                borderColor: "#aa4444",
+                shadowColor: "rgba(170, 68, 68, 0.3)",
+                buttonBgColor: "#ff6655",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Open Sans', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#ffe6e1",
                 bgEnd: "#ffccc7",
                 textPrimary: "#663333",
                 textSecondary: "#994d4d",
-                accent: "#ff6655"
+                accent: "#ff6655",
+                borderColor: "#cc9999",
+                shadowColor: "rgba(204, 153, 153, 0.2)",
+                buttonBgColor: "#ff6655",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Open Sans', sans-serif",
+                fontSize: "16px"
             }
         },
         ocean: {
@@ -64,14 +100,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#005580",
                 textPrimary: "#cce6ff",
                 textSecondary: "#99ccff",
-                accent: "#3399ff"
+                accent: "#3399ff",
+                borderColor: "#0066aa",
+                shadowColor: "rgba(0, 102, 170, 0.3)",
+                buttonBgColor: "#3399ff",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Lato', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#e6f2ff",
                 bgEnd: "#cce6ff",
                 textPrimary: "#00334d",
                 textSecondary: "#005580",
-                accent: "#3399ff"
+                accent: "#3399ff",
+                borderColor: "#99ccff",
+                shadowColor: "rgba(153, 204, 255, 0.2)",
+                buttonBgColor: "#3399ff",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Lato', sans-serif",
+                fontSize: "16px"
             }
         },
         forest: {
@@ -80,14 +128,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#145214",
                 textPrimary: "#b3e6b3",
                 textSecondary: "#80cc80",
-                accent: "#4d994d"
+                accent: "#4d994d",
+                borderColor: "#2d662d",
+                shadowColor: "rgba(45, 102, 45, 0.3)",
+                buttonBgColor: "#4d994d",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Montserrat', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#e6f2e6",
                 bgEnd: "#ccf0cc",
                 textPrimary: "#0b2d0b",
                 textSecondary: "#145214",
-                accent: "#4d994d"
+                accent: "#4d994d",
+                borderColor: "#80cc80",
+                shadowColor: "rgba(128, 204, 128, 0.2)",
+                buttonBgColor: "#4d994d",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Montserrat', sans-serif",
+                fontSize: "16px"
             }
         },
         lavender: {
@@ -96,14 +156,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#6a5d8f",
                 textPrimary: "#e6e6fa",
                 textSecondary: "#c8c8ff",
-                accent: "#b497bd"
+                accent: "#b497bd",
+                borderColor: "#7a6a99",
+                shadowColor: "rgba(122, 106, 153, 0.3)",
+                buttonBgColor: "#b497bd",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Nunito', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#f3e8ff",
                 bgEnd: "#dcd0ff",
                 textPrimary: "#4b3f72",
                 textSecondary: "#6a5d8f",
-                accent: "#b497bd"
+                accent: "#b497bd",
+                borderColor: "#c8b3d9",
+                shadowColor: "rgba(200, 179, 217, 0.2)",
+                buttonBgColor: "#b497bd",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Nunito', sans-serif",
+                fontSize: "16px"
             }
         },
         coral: {
@@ -112,14 +184,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#a65a5a",
                 textPrimary: "#ffe6e6",
                 textSecondary: "#ffb3b3",
-                accent: "#ff6666"
+                accent: "#ff6666",
+                borderColor: "#cc6666",
+                shadowColor: "rgba(204, 102, 102, 0.3)",
+                buttonBgColor: "#ff6666",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#fff0f0",
                 bgEnd: "#ffd6d6",
                 textPrimary: "#7f3f3f",
                 textSecondary: "#a65a5a",
-                accent: "#ff6666"
+                accent: "#ff6666",
+                borderColor: "#ffb3b3",
+                shadowColor: "rgba(255, 179, 179, 0.2)",
+                buttonBgColor: "#ff6666",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Inter', sans-serif",
+                fontSize: "16px"
             }
         },
         teal: {
@@ -128,14 +212,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#007373",
                 textPrimary: "#ccffff",
                 textSecondary: "#99ffff",
-                accent: "#33cccc"
+                accent: "#33cccc",
+                borderColor: "#009999",
+                shadowColor: "rgba(0, 153, 153, 0.3)",
+                buttonBgColor: "#33cccc",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#e0ffff",
                 bgEnd: "#b3ffff",
                 textPrimary: "#004d4d",
                 textSecondary: "#007373",
-                accent: "#33cccc"
+                accent: "#33cccc",
+                borderColor: "#66cccc",
+                shadowColor: "rgba(102, 204, 204, 0.2)",
+                buttonBgColor: "#33cccc",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "16px"
             }
         },
         amber: {
@@ -144,14 +240,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#997300",
                 textPrimary: "#fff8cc",
                 textSecondary: "#ffeb99",
-                accent: "#ffcc33"
+                accent: "#ffcc33",
+                borderColor: "#cc9900",
+                shadowColor: "rgba(204, 153, 0, 0.3)",
+                buttonBgColor: "#ffcc33",
+                buttonTextColor: "#000000",
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#fff9e6",
                 bgEnd: "#fff2b3",
                 textPrimary: "#664d00",
                 textSecondary: "#997300",
-                accent: "#ffcc33"
+                accent: "#ffcc33",
+                borderColor: "#ffeb99",
+                shadowColor: "rgba(255, 235, 153, 0.2)",
+                buttonBgColor: "#ffcc33",
+                buttonTextColor: "#664d00",
+                fontFamily: "'Roboto', sans-serif",
+                fontSize: "16px"
             }
         },
         plum: {
@@ -160,14 +268,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgEnd: "#6a006a",
                 textPrimary: "#e6ccff",
                 textSecondary: "#c8aaff",
-                accent: "#b366b3"
+                accent: "#b366b3",
+                borderColor: "#7a007a",
+                shadowColor: "rgba(122, 0, 122, 0.3)",
+                buttonBgColor: "#b366b3",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Open Sans', sans-serif",
+                fontSize: "16px"
             },
             light: {
                 bgStart: "#f3e6f3",
                 bgEnd: "#dcd0dc",
                 textPrimary: "#4b004b",
                 textSecondary: "#6a006a",
-                accent: "#b366b3"
+                accent: "#b366b3",
+                borderColor: "#c8aaff",
+                shadowColor: "rgba(200, 170, 255, 0.2)",
+                buttonBgColor: "#b366b3",
+                buttonTextColor: "#ffffff",
+                fontFamily: "'Open Sans', sans-serif",
+                fontSize: "16px"
             }
         }
     };
@@ -210,6 +330,20 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty('--text-light', theme.textPrimary);
         document.documentElement.style.setProperty('--text-dark', theme.textSecondary);
         document.documentElement.style.setProperty('--primary-color', theme.accent);
+        document.documentElement.style.setProperty('--border-color', theme.borderColor);
+        document.documentElement.style.setProperty('--shadow-color', theme.shadowColor);
+        document.documentElement.style.setProperty('--button-bg-color', theme.buttonBgColor);
+        document.documentElement.style.setProperty('--button-text-color', theme.buttonTextColor);
+        document.documentElement.style.setProperty('--font-family', theme.fontFamily);
+        // Do not change font-size for preset themes as per user request
+        // document.documentElement.style.setProperty('--font-size', theme.fontSize + 'px');
+
+        // Update the "Nice to meet you, I'm Guransh A" text color and font family to match theme
+        const introText = document.querySelector('.intro-text h1');
+        if (introText) {
+            introText.style.color = theme.textPrimary;
+            introText.style.fontFamily = theme.fontFamily;
+        }
     }
 
     function updateThemePreview() {
@@ -218,12 +352,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const textPrimary = getComputedStyle(document.documentElement).getPropertyValue('--text-light').trim();
         const textSecondary = getComputedStyle(document.documentElement).getPropertyValue('--text-dark').trim();
         const accent = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+        const buttonBgColor = getComputedStyle(document.documentElement).getPropertyValue('--button-bg-color').trim();
+        const buttonTextColor = getComputedStyle(document.documentElement).getPropertyValue('--button-text-color').trim();
+        const fontFamily = getComputedStyle(document.documentElement).getPropertyValue('--font-family').trim();
+        const fontSize = getComputedStyle(document.documentElement).getPropertyValue('--font-size').trim();
 
         const themePreview = document.querySelector('.theme-preview');
         if (themePreview) {
             themePreview.style.background = `linear-gradient(${bgStart}, ${bgEnd})`;
             themePreview.style.color = textPrimary;
             themePreview.style.border = `2px solid ${accent}`;
+            themePreview.style.fontFamily = fontFamily;
+            themePreview.style.fontSize = fontSize;
+        }
+
+        const previewBtn = document.querySelector('.preview-btn');
+        if (previewBtn) {
+            previewBtn.style.backgroundColor = buttonBgColor;
+            previewBtn.style.color = buttonTextColor;
         }
     }
 
@@ -254,12 +400,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function loadTheme() {
-        const savedPreset = localStorage.getItem("presetTheme");
-        const savedVariant = localStorage.getItem("themeVariant");
-        if (savedPreset && savedVariant && presetThemes[savedPreset]) {
-            applyTheme(savedPreset, savedVariant);
+        const customTheme = localStorage.getItem("customTheme");
+        if (customTheme) {
+            const theme = JSON.parse(customTheme);
+            document.documentElement.style.setProperty('--dark-bg-start', theme.bgStart);
+            document.documentElement.style.setProperty('--dark-bg-end', theme.bgEnd);
+            document.documentElement.style.setProperty('--text-light', theme.textPrimary);
+            document.documentElement.style.setProperty('--text-dark', theme.textSecondary);
+            document.documentElement.style.setProperty('--primary-color', theme.accent);
+            document.documentElement.style.setProperty('--border-color', theme.borderColor);
+            document.documentElement.style.setProperty('--shadow-color', theme.shadowColor);
+            document.documentElement.style.setProperty('--button-bg-color', theme.buttonBgColor);
+            document.documentElement.style.setProperty('--button-text-color', theme.buttonTextColor);
+            document.documentElement.style.setProperty('--font-family', theme.fontFamily);
+            document.documentElement.style.setProperty('--font-size', theme.fontSize + 'px');
+
+            // Set the modal inputs to the custom theme values
+            document.getElementById("font-family").value = theme.fontFamily;
+            document.getElementById("font-family").style.fontFamily = theme.fontFamily;
+
+            const variant = localStorage.getItem("themeVariant");
+            if (variant === "light") {
+                body.classList.add("light-mode");
+                animateToSun();
+            } else {
+                body.classList.remove("light-mode");
+                animateToMoon();
+            }
         } else {
-            applyTheme("moon", "dark");
+            const savedPreset = localStorage.getItem("presetTheme");
+            const savedVariant = localStorage.getItem("themeVariant");
+            if (savedPreset && savedVariant && presetThemes[savedPreset]) {
+                applyTheme(savedPreset, savedVariant);
+            } else {
+                applyTheme("moon", "dark");
+            }
         }
     }
 
@@ -321,12 +496,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentTextPrimary = getComputedStyle(document.documentElement).getPropertyValue('--text-light').trim();
         const currentTextSecondary = getComputedStyle(document.documentElement).getPropertyValue('--text-dark').trim();
         const currentAccent = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
+        const currentBorderColor = getComputedStyle(document.documentElement).getPropertyValue('--border-color').trim();
+        const currentShadowColor = getComputedStyle(document.documentElement).getPropertyValue('--shadow-color').trim();
+        const currentButtonBgColor = getComputedStyle(document.documentElement).getPropertyValue('--button-bg-color').trim();
+        const currentButtonTextColor = getComputedStyle(document.documentElement).getPropertyValue('--button-text-color').trim();
+        const currentFontFamily = getComputedStyle(document.documentElement).getPropertyValue('--font-family').trim();
+        const currentFontSize = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-size').trim());
 
         document.getElementById("bg-start").value = currentBgStart;
         document.getElementById("bg-end").value = currentBgEnd;
         document.getElementById("primary-text").value = currentTextPrimary;
         document.getElementById("secondary-text").value = currentTextSecondary;
         document.getElementById("accent-color").value = currentAccent;
+        document.getElementById("border-color").value = currentBorderColor;
+        document.getElementById("shadow-color").value = currentShadowColor;
+        document.getElementById("button-bg-color").value = currentButtonBgColor;
+        document.getElementById("button-text-color").value = currentButtonTextColor;
+        document.getElementById("font-family").value = currentFontFamily;
+        document.getElementById("font-size").value = currentFontSize;
 
         themeModal.classList.add("active");
         console.log("Theme modal opened");
@@ -345,15 +532,41 @@ document.addEventListener("DOMContentLoaded", () => {
             const textPrimary = document.getElementById("primary-text").value;
             const textSecondary = document.getElementById("secondary-text").value;
             const accent = document.getElementById("accent-color").value;
+            const borderColor = document.getElementById("border-color").value;
+            const shadowColor = document.getElementById("shadow-color").value;
+            const buttonBgColor = document.getElementById("button-bg-color").value;
+            const buttonTextColor = document.getElementById("button-text-color").value;
+            const fontFamily = document.getElementById("font-family").value;
+            const fontSize = document.getElementById("font-size").value;
 
             document.documentElement.style.setProperty('--dark-bg-start', bgStart);
             document.documentElement.style.setProperty('--dark-bg-end', bgEnd);
             document.documentElement.style.setProperty('--text-light', textPrimary);
             document.documentElement.style.setProperty('--text-dark', textSecondary);
             document.documentElement.style.setProperty('--primary-color', accent);
+            document.documentElement.style.setProperty('--border-color', borderColor);
+            document.documentElement.style.setProperty('--shadow-color', shadowColor);
+            document.documentElement.style.setProperty('--button-bg-color', buttonBgColor);
+            document.documentElement.style.setProperty('--button-text-color', buttonTextColor);
+            document.documentElement.style.setProperty('--font-family', fontFamily);
+            document.documentElement.style.setProperty('--font-size', fontSize + 'px');
+
+            const fontFamilySelect = document.getElementById('font-family');
+            if (fontFamilySelect) {
+                fontFamilySelect.style.fontFamily = fontFamily;
+            }
 
             updateThemePreview();
         });
+    });
+
+    // Separate event listener for font-family select change
+    const fontFamilySelect = document.getElementById("font-family");
+    fontFamilySelect.addEventListener('change', () => {
+        const fontFamily = fontFamilySelect.value;
+        document.documentElement.style.setProperty('--font-family', fontFamily);
+        fontFamilySelect.style.fontFamily = fontFamily;
+        updateThemePreview();
     });
 
     applyThemeBtn.addEventListener("click", () => {
@@ -362,13 +575,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const textPrimary = document.getElementById("primary-text").value;
         const textSecondary = document.getElementById("secondary-text").value;
         const accent = document.getElementById("accent-color").value;
+        const borderColor = document.getElementById("border-color").value;
+        const shadowColor = document.getElementById("shadow-color").value;
+        const buttonBgColor = document.getElementById("button-bg-color").value;
+        const buttonTextColor = document.getElementById("button-text-color").value;
+        const fontFamily = document.getElementById("font-family").value;
+        const fontSize = document.getElementById("font-size").value;
 
         const customThemeData = {
             bgStart,
             bgEnd,
             textPrimary,
             textSecondary,
-            accent
+            accent,
+            borderColor,
+            shadowColor,
+            buttonBgColor,
+            buttonTextColor,
+            fontFamily,
+            fontSize
         };
 
         localStorage.setItem("customTheme", JSON.stringify(customThemeData));
