@@ -400,42 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function loadTheme() {
-        const customTheme = localStorage.getItem("customTheme");
-        if (customTheme) {
-            const theme = JSON.parse(customTheme);
-            document.documentElement.style.setProperty('--dark-bg-start', theme.bgStart);
-            document.documentElement.style.setProperty('--dark-bg-end', theme.bgEnd);
-            document.documentElement.style.setProperty('--text-light', theme.textPrimary);
-            document.documentElement.style.setProperty('--text-dark', theme.textSecondary);
-            document.documentElement.style.setProperty('--primary-color', theme.accent);
-            document.documentElement.style.setProperty('--border-color', theme.borderColor);
-            document.documentElement.style.setProperty('--shadow-color', theme.shadowColor);
-            document.documentElement.style.setProperty('--button-bg-color', theme.buttonBgColor);
-            document.documentElement.style.setProperty('--button-text-color', theme.buttonTextColor);
-            document.documentElement.style.setProperty('--font-family', theme.fontFamily);
-            document.documentElement.style.setProperty('--font-size', theme.fontSize + 'px');
-
-            // Set the modal inputs to the custom theme values
-            document.getElementById("font-family").value = theme.fontFamily;
-            document.getElementById("font-family").style.fontFamily = theme.fontFamily;
-
-            const variant = localStorage.getItem("themeVariant");
-            if (variant === "light") {
-                body.classList.add("light-mode");
-                animateToSun();
-            } else {
-                body.classList.remove("light-mode");
-                animateToMoon();
-            }
-        } else {
-            const savedPreset = localStorage.getItem("presetTheme");
-            const savedVariant = localStorage.getItem("themeVariant");
-            if (savedPreset && savedVariant && presetThemes[savedPreset]) {
-                applyTheme(savedPreset, savedVariant);
-            } else {
-                applyTheme("moon", "dark");
-            }
-        }
+        applyTheme("moon", "dark");
     }
 
     // SVG path data for moon and sun shapes
@@ -516,12 +481,32 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("font-size").value = currentFontSize;
 
         themeModal.classList.add("active");
+        document.body.classList.add('modal-open');
         console.log("Theme modal opened");
     });
 
     cancelTheme.addEventListener("click", () => {
-        loadTheme();
+        // restore previously saved/custom theme from localStorage (if exists)
+        const saved = localStorage.getItem('customTheme');
+        if (saved) {
+            const data = JSON.parse(saved);
+            document.documentElement.style.setProperty('--dark-bg-start', data.bgStart);
+            document.documentElement.style.setProperty('--dark-bg-end', data.bgEnd);
+            document.documentElement.style.setProperty('--text-light', data.textPrimary);
+            document.documentElement.style.setProperty('--text-dark', data.textSecondary);
+            document.documentElement.style.setProperty('--primary-color', data.accent);
+            document.documentElement.style.setProperty('--border-color', data.borderColor);
+            document.documentElement.style.setProperty('--shadow-color', data.shadowColor);
+            document.documentElement.style.setProperty('--button-bg-color', data.buttonBgColor);
+            document.documentElement.style.setProperty('--button-text-color', data.buttonTextColor);
+            document.documentElement.style.setProperty('--font-family', data.fontFamily);
+            document.documentElement.style.setProperty('--font-size', data.fontSize + 'px');
+        } else {
+            // fallback to the current preset
+            loadTheme();
+        }
         themeModal.classList.remove("active");
+        document.body.classList.remove('modal-open');
     });
 
     const inputs = document.querySelectorAll('#theme-modal input');
@@ -603,6 +588,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("themeVariant", variant);
 
         themeModal.classList.remove("active");
+        document.body.classList.remove('modal-open');
     });
 
     const presetButtons = document.querySelectorAll(".preset-btn");
@@ -613,6 +599,22 @@ document.addEventListener("DOMContentLoaded", () => {
             const variant = body.classList.contains("light-mode") ? "light" : "dark";
             applyTheme(currentPreset, variant);
             themeModal.classList.remove("active");
+            document.body.classList.remove('modal-open');
         });
+    });
+
+    // Close modal when clicking outside the content
+    themeModal.addEventListener('click', (e) => {
+        if (e.target === themeModal) {
+            // behave like cancel
+            cancelTheme.click();
+        }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && themeModal.classList.contains('active')) {
+            cancelTheme.click();
+        }
     });
 });
