@@ -335,10 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty('--button-bg-color', theme.buttonBgColor);
         document.documentElement.style.setProperty('--button-text-color', theme.buttonTextColor);
         document.documentElement.style.setProperty('--font-family', theme.fontFamily);
-        // Do not change font-size for preset themes as per user request
-        // document.documentElement.style.setProperty('--font-size', theme.fontSize + 'px');
 
-        // Update the "Nice to meet you, I'm Guransh A" text color and font family to match theme
         const introText = document.querySelector('.intro-text h1');
         if (introText) {
             introText.style.color = theme.textPrimary;
@@ -380,7 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("themeVariant", variant);
         applyPresetTheme(currentPreset, variant);
 
-        // Update the theme switch icon color to the current theme accent color
         const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
         if (themeSwitch) {
             themeSwitch.querySelectorAll('svg').forEach(svg => {
@@ -403,7 +399,6 @@ document.addEventListener("DOMContentLoaded", () => {
         applyTheme("moon", "dark");
     }
 
-    // SVG path data for moon and sun shapes
     const moonPath = "M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z";
     const sunPath = "M12 4.354a7.646 7.646 0 1 0 0 15.292 7.646 7.646 0 0 0 0-15.292zm0 13.292a5.646 5.646 0 1 1 0-11.292 5.646 5.646 0 0 1 0 11.292z";
 
@@ -423,7 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     themeIconPath = document.getElementById('theme-icon-path');
 
-    // Initialize icon based on current theme
+ 
     if (localStorage.getItem('themeVariant') === 'light') {
         animateToSun();
     } else {
@@ -486,7 +481,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     cancelTheme.addEventListener("click", () => {
-        // restore previously saved/custom theme from localStorage (if exists)
         const saved = localStorage.getItem('customTheme');
         if (saved) {
             const data = JSON.parse(saved);
@@ -502,7 +496,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.documentElement.style.setProperty('--font-family', data.fontFamily);
             document.documentElement.style.setProperty('--font-size', data.fontSize + 'px');
         } else {
-            // fallback to the current preset
             loadTheme();
         }
         themeModal.classList.remove("active");
@@ -544,8 +537,6 @@ document.addEventListener("DOMContentLoaded", () => {
             updateThemePreview();
         });
     });
-
-    // Separate event listener for font-family select change
     const fontFamilySelect = document.getElementById("font-family");
     fontFamilySelect.addEventListener('change', () => {
         const fontFamily = fontFamilySelect.value;
@@ -583,7 +574,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.setItem("customTheme", JSON.stringify(customThemeData));
         localStorage.removeItem("presetTheme");
-        // Update themeVariant based on light-mode class
         const variant = body.classList.contains("light-mode") ? "light" : "dark";
         localStorage.setItem("themeVariant", variant);
 
@@ -603,15 +593,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Close modal when clicking outside the content
     themeModal.addEventListener('click', (e) => {
         if (e.target === themeModal) {
-            // behave like cancel
             cancelTheme.click();
         }
     });
 
-    // Close modal on Escape key
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && themeModal.classList.contains('active')) {
             cancelTheme.click();

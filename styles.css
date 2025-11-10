@@ -15,7 +15,6 @@
     --text-color: #ffffff;
     --switch-bg: #555;
 
-    /* New theme variables */
     --border-color: #444;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --button-bg-color: #007bff;
@@ -30,8 +29,6 @@
     --text-color: #ffffff;
     --switch-bg: #555;
 }
-
-/* Removed old switch toggle styles for dark mode button */
 
 #theme-switch {
     background: none;
@@ -536,8 +533,6 @@ footer {
     color: var(--text-dark);
 }
 
-/* Theme modal overlay (centers content). On desktop the content becomes a centered "island" card
-   with a fixed max-width and internal scrolling to avoid being cut off on short viewports. */
 .theme-modal {
     display: none;
     position: fixed;
@@ -546,7 +541,7 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 2000;
-    padding: 2rem; /* give breathing room on very small screens */
+    padding: 2rem;
 }
 .theme-modal.active {
     display: flex;
@@ -560,11 +555,11 @@ footer {
     gap: 1rem;
     color: var(--text-light);
     width: 100%;
-    max-width: 720px; /* island width on large screens */
+    max-width: 720px;
     box-shadow: 0 20px 60px var(--shadow-color);
     border: 1px solid rgba(255,255,255,0.03);
-    max-height: calc(100vh - 120px); /* keep some space from edges */
-    overflow-y: auto; /* internal scrolling if content is tall */
+    max-height: calc(100vh - 120px); 
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     transform: translateY(0);
     animation: popIn 220ms ease-out;
@@ -575,7 +570,7 @@ footer {
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* lock body scrolling when modal is open */
+
 body.modal-open {
     overflow: hidden;
 }
@@ -710,7 +705,7 @@ section {
     }
 }
 
-/* Theme modal responsiveness */
+
 @media (max-width: 768px) {
     .theme-content {
         padding: 1.2rem;
