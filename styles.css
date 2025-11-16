@@ -512,9 +512,6 @@ nav {
 .certificate-card h4 { color: var(--text-light); margin: 0; }
 .certificate-card .github-link { margin-top: auto; }
 .small-note { color: var(--text-dark); font-size: 0.95rem; margin: 0.4rem 0; }
-
-/* Utility to hide things until they'll be used */
-.hidden { display: none !important; }
 .club-item {
     background: rgba(0, 123, 255, 0.05);
     padding: 2rem;
@@ -622,6 +619,34 @@ nav {
 }
 #theme-open:hover {
     background-color: #0056b3;
+}
+
+/* New modern theme button styles */
+.theme-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(0,168,255,1), rgba(0,123,255,0.95));
+    color: white;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+.theme-btn i { font-size: 1rem; color: #fff; }
+.theme-btn .btn-label { font-size: 1rem; line-height: 1; }
+.theme-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.30); }
+.theme-btn:focus { outline: 3px solid rgba(0,168,255,0.25); outline-offset: 2px; }
+
+/* Reduce label on small screen - show icon-only pill */
+@media(max-width: 480px) {
+    .theme-btn { padding: 0.55rem 0.9rem; border-radius: 999px; }
+    .theme-btn .btn-label { font-size: 0.95rem; }
+    .theme-btn i { margin: 0; }
 }
 
 footer {
