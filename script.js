@@ -466,4 +466,52 @@ document.addEventListener("DOMContentLoaded", () => {
             cancelTheme.click();
         }
     });
+
+    
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const clearFilterBtn = document.querySelector('.filter-clear');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    function updateProjectVisibility() {
+        const active = Array.from(document.querySelectorAll('.filter-btn.active')).map(b => b.dataset.tech).filter(t => t && t !== 'all');
+        if (active.length === 0) {
+            projectCards.forEach(c => c.style.display = '');
+            document.querySelector('.filter-btn[data-tech="all"]').classList.add('active');
+            return;
+        }
+        document.querySelector('.filter-btn[data-tech="all"]').classList.remove('active');
+        projectCards.forEach(card => {
+            const techs = card.getAttribute('data-tech') || '';
+            
+            const matches = active.every(a => techs.split(/\s+/).includes(a));
+            card.style.display = matches ? '' : 'none';
+        });
+    }
+
+    filterButtons.forEach(b => {
+        b.addEventListener('click', () => {
+            const tech = b.dataset.tech;
+            if (tech === 'all') {
+                document.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
+                b.classList.add('active');
+            } else {
+                b.classList.toggle('active');
+                document.querySelector('.filter-btn[data-tech="all"]').classList.remove('active');
+            }
+            
+            filterButtons.forEach(btn => btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false'));
+            updateProjectVisibility();
+        });
+    });
+
+    
+    filterButtons.forEach(btn => btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false'));
+
+    if (clearFilterBtn) {
+        clearFilterBtn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
+            document.querySelector('.filter-btn[data-tech="all"]').classList.add('active');
+            updateProjectVisibility();
+        });
+    }
 });

@@ -92,8 +92,15 @@
 
         <section id="projects">
             <h2>My Projects</h2>
+            <div class="project-filters" role="toolbar" aria-label="Filter projects by technology">
+                <button class="filter-btn active" data-tech="all">All</button>
+                <button class="filter-btn" data-tech="html" title="HTML"><i class="fab fa-html5"></i> HTML</button>
+                <button class="filter-btn" data-tech="css" title="CSS"><i class="fab fa-css3-alt"></i> CSS</button>
+                <button class="filter-btn" data-tech="js" title="JavaScript"><i class="fab fa-js-square"></i> JS</button>
+                <button class="filter-clear" title="Clear filters">Clear</button>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-tech="excel">
                     <h3><i class="fas fa-file-excel"></i> Excel Calculator</h3>
                     <p>
                         A custom Excel calculator for my dad that converts kilograms to pounds. Streamlines invoice creation with instant conversions. This tool helps save time and reduce errors in manual calculations.
@@ -109,7 +116,7 @@
                     </a>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-tech="html css">
                     <h3><i class="fas fa-heartbeat"></i> Health Website</h3>
                     <p>A health-focused informational website created for a school project. It provides valuable information on various health topics, including nutrition, exercise, and wellness tips. Designed to educate and promote healthy living among students.</p>
                     <div class="project-tech">
@@ -124,7 +131,7 @@
                     </a>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-tech="html css">
                     <h3><i class="fas fa-square-root-alt"></i> Math Website</h3>
                     <p>An interactive mathematics learning platform designed to help students understand complex math concepts. Features include step-by-step tutorials, practice problems, and interactive quizzes. Built to make learning math engaging and accessible for all ages.</p>
                     <div class="project-tech">
@@ -139,7 +146,7 @@
                     </a>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-tech="html css js">
                     <h3><i class="fas fa-code"></i> Portfolio Website</h3>
                     <p>
                         You're viewing my personal portfolio website — built and hosted right here. It showcases my projects, skills, and experience as a developer. Features responsive design, theme customization, and smooth animations for an engaging user experience.
@@ -157,7 +164,7 @@
                     </a>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-tech="html css wix">
                     <h3><i class="fas fa-store"></i> Gator Swamp</h3>
                     <p>
                         A business/math project from grade 7 where I earned an A-. Created a presentation and a Wix website for Gator Swamp, showcasing business planning and mathematical concepts.
@@ -234,6 +241,28 @@
             </div>
         </section>
 
+        <section id="certificates" class="hidden" aria-hidden="true">
+            <h2><i class="fas fa-certificate"></i> Certificates</h2>
+            <p class="small-note">Add your certificates from places like CodeCamp by placing certificate images in <code>images/</code> and linking to the issuer's certificate URL.</p>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-thumb">
+                        <img src="images/codecamp-certificate.svg" alt="FreeCodeCamp Certificate" loading="lazy"/>
+                    </div>
+                    <h4>FreeCodeCamp — Responsive Web Design</h4>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="github-link">View Certificate</a>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-thumb">
+                        <img src="images/example-cert.svg" alt="Example Certificate" loading="lazy"/>
+                    </div>
+                    <h4>CodeCamp — Intro to HTML</h4>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="github-link">View Certificate</a>
+                </div>
+            </div>
+        </section>
+
         <section id="contact">
             <h2>Contact Me</h2>
             <div class="contact-cards">
@@ -263,7 +292,7 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </section>  
     </main>
 
     <footer>
