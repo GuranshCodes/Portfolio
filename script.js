@@ -237,6 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("presetTheme", currentPreset);
         localStorage.setItem("themeVariant", variant);
         applyPresetTheme(currentPreset, variant);
+        setTimeout(() => updateTimeCardTheme(), 50);
 
         const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
         if (themeSwitch) {
@@ -440,6 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         themeModal.classList.remove("active");
         document.body.classList.remove('modal-open');
+        setTimeout(() => updateTimeCardTheme(), 50);
     });
 
     const presetButtons = document.querySelectorAll(".preset-btn");
@@ -449,6 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentPreset = selectedTheme;
             const variant = body.classList.contains("light-mode") ? "light" : "dark";
             applyTheme(currentPreset, variant);
+            setTimeout(() => updateTimeCardTheme(), 50);
             themeModal.classList.remove("active");
             document.body.classList.remove('modal-open');
         });
@@ -467,7 +470,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    function updateBramptonTime() {
+        const timeElement = document.querySelector('.current-time');
+        if (!timeElement) return;
+        
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/Toronto',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        });
+        
+        timeElement.textContent = formatter.format(new Date());
+    }
     
+    function updateTimeCardTheme() {
+    }
+    
+    updateBramptonTime();
+    setInterval(updateBramptonTime, 1000);
+    updateTimeCardTheme();
+
     const filterButtons = document.querySelectorAll('.filter-btn');
     const clearFilterBtn = document.querySelector('.filter-clear');
     const projectCards = document.querySelectorAll('.project-card');

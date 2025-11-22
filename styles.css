@@ -519,6 +519,12 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
 }
+.time-card time {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+.time-card .small-note { margin-top: 0.5rem; color: var(--text-dark); }
 .club-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 123, 255, 0.3);
@@ -542,6 +548,7 @@ nav {
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    grid-auto-rows: auto;
 }
 .contact-card {
     background: var(--card-bg);
@@ -550,6 +557,7 @@ nav {
     text-align: center;
     transition: transform 0.3s ease;
 }
+
 .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0,123,255,0.2);
@@ -567,9 +575,44 @@ nav {
     color: var(--primary-color);
     text-decoration: none;
 }
+
+.local-time-section {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.local-time-card {
+    display: inline-block;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.local-time-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,123,255,0.2);
+}
+.local-time-card i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--primary-color);
+}
+.local-time-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+.current-time {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0 0;
+    color: var(--primary-color);
+}
+
 .socials {
     text-align: center;
-    margin-top: 3rem;
 }
 .socials h3 {
     color: var(--text-light);
@@ -621,7 +664,6 @@ nav {
     background-color: #0056b3;
 }
 
-/* New modern theme button styles */
 .theme-btn {
     display: inline-flex;
     align-items: center;
@@ -642,7 +684,6 @@ nav {
 .theme-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.30); }
 .theme-btn:focus { outline: 3px solid rgba(0,168,255,0.25); outline-offset: 2px; }
 
-/* Reduce label on small screen - show icon-only pill */
 @media(max-width: 480px) {
     .theme-btn { padding: 0.55rem 0.9rem; border-radius: 999px; }
     .theme-btn .btn-label { font-size: 0.95rem; }
