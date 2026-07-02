@@ -11,9 +11,9 @@ import GoalsSection from '@/components/portfolio/GoalsSection';
 import ActivitiesSection from '@/components/portfolio/ActivitiesSection';
 import ContactFooter from '@/components/portfolio/ContactFooter';
 
-const HERO_IMAGE = 'https://media.db.com/images/public/6a465b1f44f7b3679234639c/cfe4090b0_generated_39d39997.png';
-const PROJECTS_IMAGE = 'https://media.db.com/images/public/6a465b1f44f7b3679234639c/842436cd3_generated_9872ea13.png';
-const ABOUT_IMAGE = 'https://media.db.com/images/public/6a465b1f44f7b3679234639c/7e1ebb59a_generated_beb2ad34.png';
+const HERO_IMAGE = '/images/hero-illustration.svg';
+const PROJECTS_IMAGE = '/images/projects-illustration.svg';
+const ABOUT_IMAGE = '/images/about-illustration.svg';
 
 export default function Home() {
   return (
