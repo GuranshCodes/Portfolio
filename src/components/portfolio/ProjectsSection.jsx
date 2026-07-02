@@ -33,7 +33,7 @@ const PROJECTS = [
   },
   {
     title: 'Gator Swamp',
-    description: 'A business/math project from Grade 7 where I earned an A-. Created a presentation and a Wix website for Gator Swamp, showcasing business planning and mathematical concepts.',
+    description: 'A Grade 7 business and math project where I built a presentation and a simple Wix website for Gator Swamp.',
     techStack: ['WIX', 'SLIDES'],
     status: 'Done',
     links: [
@@ -91,7 +91,7 @@ export default function ProjectsSection({ projectsImage }) {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-[#94A3B8] text-base md:text-lg max-w-2xl mb-12"
         >
-          Here's what I've built, learned, and shipped so far.
+          A look at some of the things I have built and worked on so far.
         </motion.p>
 
         {/* Banner image */}

@@ -65,7 +65,7 @@ export default function HeroSection({ heroImage }) {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-[#94A3B8] text-lg md:text-xl max-w-lg leading-relaxed mb-10"
             >
-              Grade 9 student & aspiring software engineer with 3+ years of experience building websites and teaching others to code.
+              I am a Grade 9 student learning to build websites and other small projects while improving my coding skills every day.
             </motion.p>
 
             {/* Quick facts */}

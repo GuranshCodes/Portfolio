@@ -58,8 +58,8 @@ export default function AboutSection({ aboutImage }) {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-heading font-bold text-3xl md:text-4xl text-[#F1F5F9] tracking-tight"
             >
-              Building the future,<br />
-              <span className="text-[#2563EB]">one line at a time.</span>
+              Building things that matter,<br />
+              <span className="text-[#2563EB]">one project at a time.</span>
             </motion.h2>
 
             <motion.p
@@ -68,7 +68,7 @@ export default function AboutSection({ aboutImage }) {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-[#94A3B8] text-base md:text-lg leading-relaxed"
             >
-              I'm a Grade 9 student and aspiring developer with a passion for creating awesome websites. With 3+ years of experience being proficient in HTML, CSS, JavaScript, and Python, I love teaching others and bringing creative ideas to life.
+              I am a Grade 9 student learning web development and building small projects that help me improve my skills. I like making simple, useful websites and sharing what I learn with others.
             </motion.p>
 
             {/* Skills */}

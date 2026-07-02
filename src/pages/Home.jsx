@@ -9,9 +9,10 @@ import GoalsSection from '@/components/portfolio/GoalsSection';
 import ActivitiesSection from '@/components/portfolio/ActivitiesSection';
 import ContactFooter from '@/components/portfolio/ContactFooter';
 
-const HERO_IMAGE = '/images/hero-illustration.svg';
-const PROJECTS_IMAGE = '/images/projects-illustration.svg';
-const ABOUT_IMAGE = '/images/about-illustration.svg';
+const baseUrl = import.meta.env.BASE_URL || '/';
+const HERO_IMAGE = `${baseUrl}images/hero-illustration.svg`;
+const PROJECTS_IMAGE = `${baseUrl}images/projects-illustration.svg`;
+const ABOUT_IMAGE = `${baseUrl}images/about-illustration.svg`;
 
 export default function Home() {
   return (

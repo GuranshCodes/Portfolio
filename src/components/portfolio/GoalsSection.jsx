@@ -48,7 +48,7 @@ export default function GoalsSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-[#94A3B8] text-base md:text-lg max-w-2xl mb-12"
         >
-          Where I'm heading, the missions on my roadmap.
+          A few goals I am working toward as I keep learning.
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-6">

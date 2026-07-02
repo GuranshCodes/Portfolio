@@ -86,24 +86,6 @@
   margin-left: 2px;
 }
 
-/* Scroll progress bar */
-.scroll-progress {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 3px;
-  height: 100vh;
-  z-index: 100;
-  pointer-events: none;
-}
-
-.scroll-progress-bar {
-  background: #2563EB;
-  width: 100%;
-  transform-origin: top;
-  transition: transform 0.1s linear;
-}
-
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

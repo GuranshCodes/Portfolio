@@ -86,7 +86,7 @@ export default function ActivitiesSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-[#94A3B8] text-base md:text-lg max-w-2xl mb-12"
         >
-          Beyond code, the clubs, teams, and communities I've been part of.
+          Some of the clubs and activities that have shaped my experience outside of coding.
         </motion.p>
 
         {/* Timeline */}
