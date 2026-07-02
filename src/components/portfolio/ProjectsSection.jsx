@@ -50,17 +50,28 @@ const PROJECTS = [
     links: [{ label: 'View Website', url: 'https://classresources.ca', type: 'external' }],
   },
   {
-    title: 'Financial Literacy Quiz',
+    title: 'Taxes Website',
     description: 'An interactive quiz built to help students test and reinforce their understanding of key financial literacy concepts in a fun, engaging way.',
     techStack: ['WEB'],
     status: 'Done',
-    links: [{ label: 'View Website', url: 'https://classresources.ca', type: 'external' }],
+    links: [{ label: 'View Website', url: 'https://taxes.classresources.ca', type: 'external' }],
+  },
+  {
+    title: 'Calculations Website',
+    description: 'An engaging, interactive quiz that allows students to practice and deepen their knowledge of core financial literacy topics through a fun learning experience.',
+    techStack: ['WEB'],
+    status: 'Done',
+    links: [{ label: 'View Website', url: 'https://calculations.classresources.ca', type: 'external' }],
   },
 ];
 
-export default function ProjectsSection({ projectsImage }) {
+/**
+ * @param {{ projectsImage?: string }} props
+ */
+export default function ProjectsSection({ projectsImage = '' }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const projectsBannerSrc = `${projectsImage}?v=2`;
 
   return (
     <section id="projects" className="py-24 md:py-32 px-6 md:px-12 lg:px-[12vw] relative" ref={ref}>
@@ -102,7 +113,7 @@ export default function ProjectsSection({ projectsImage }) {
           className="rounded-2xl overflow-hidden mb-12 max-h-48 md:max-h-64"
         >
           <img
-            src={projectsImage}
+            src={projectsBannerSrc}
             alt="Abstract 3D glass shapes representing code and logic"
             className="w-full h-full object-cover"
           />
