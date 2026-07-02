@@ -2,6 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 
+/**
+ * @param {{
+ *   project: {
+ *     status: string,
+ *     techStack: string[],
+ *     title: string,
+ *     description: string,
+ *     links: Array<{ label: string, url: string, type: string }>
+ *   },
+ *   index: number
+ * }} props
+ */
 export default function ProjectCard({ project, index }) {
   const isDone = project.status === 'Done';
   return (
@@ -13,12 +25,12 @@ export default function ProjectCard({ project, index }) {
       className="glass-card rounded-2xl p-6 md:p-8 group hover:shadow-lg hover:shadow-[#2563EB]/5 transition-all duration-500"
     >
       {/* Status + tech */}
-      <div className="flex items-start justify-between mb-4">
-        <span className={`text-xs font-semibold px-3 py-1 rounded-full ${isDone ? 'text-emerald-400 bg-emerald-400/10' : 'text-amber-400 bg-amber-400/10'}`}>
+      <div className="flex flex-col gap-3 mb-4">
+        <span className={`inline-flex w-fit text-xs font-semibold px-3 py-1 rounded-full ${isDone ? 'text-emerald-400 bg-emerald-400/10' : 'text-amber-400 bg-amber-400/10'}`}>
           {isDone ? 'Done' : 'In Progress'}
         </span>
-        <div className="flex items-center gap-3">
-          {project.techStack.map(tech => (
+        <div className="flex flex-wrap items-center gap-2">
+          {project.techStack.map((tech) => (
             <span key={tech} className="text-[10px] text-[#2563EB] bg-[#2563EB]/5 px-2 py-0.5 rounded">
               {tech}
             </span>
@@ -38,7 +50,7 @@ export default function ProjectCard({ project, index }) {
 
       {/* Links */}
       <div className="flex flex-wrap gap-3">
-        {project.links.map(link => (
+        {project.links.map((link) => (
           <a
             key={link.label}
             href={link.url}

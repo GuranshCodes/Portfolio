@@ -15,6 +15,11 @@ declare module 'framer-motion' {
   export const useInView: any;
 }
 
+declare module 'lucide-react' {
+  export const ExternalLink: any;
+  export const Github: any;
+}
+
 declare namespace JSX {
   interface Element {}
   interface ElementClass {}
