@@ -50,11 +50,18 @@ const PROJECTS = [
     links: [{ label: 'View Website', url: 'https://classresources.ca', type: 'external' }],
   },
   {
-    title: 'Financial Literacy Quiz',
+    title: 'Taxes Website',
     description: 'An interactive quiz built to help students test and reinforce their understanding of key financial literacy concepts in a fun, engaging way.',
     techStack: ['WEB'],
     status: 'Done',
-    links: [{ label: 'View Website', url: 'https://classresources.ca', type: 'external' }],
+    links: [{ label: 'View Website', url: 'https://taxes.classresources.ca', type: 'external' }],
+  },
+  {
+    title: 'Calculations Website',
+    description: 'An engaging, interactive quiz that allows students to practice and deepen their knowledge of core financial literacy topics through a fun learning experience.',
+    techStack: ['WEB'],
+    status: 'Done',
+    links: [{ label: 'View Website', url: 'https://calculations.classresources.ca', type: 'external' }],
   },
 ];
 
