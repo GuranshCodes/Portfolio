@@ -56,7 +56,7 @@ https://guranshdhaliwal.qzz.io/
 └── vite.config.js
 </code></pre>
 
-<h2>Installation</h2>
+<h2>Installation if you really want it!</h2>
 
 <h3>Clone the repository</h3>
 
