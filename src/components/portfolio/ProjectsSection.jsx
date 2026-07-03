@@ -41,14 +41,7 @@ const PROJECTS = [
       { label: 'View Presentation', url: 'https://www.canva.com/design/DAGjs3_hTO8/w7swFZ7ZHHRGgP0a8ohErg/edit', type: 'external' },
       { label: 'Feedback Form', url: 'https://docs.google.com/forms/d/e/1FAIpQLScIucCYBvLkhfvc_VUpwREamRru_iHaJhqvcJs6FN3vbOPhig/viewform?usp=header', type: 'external' },
     ],
-  },
-  {
-    title: 'Financial Literacy Guide',
-    description: 'An educational resource designed to teach students the basics of personal finance, including budgeting, saving, and smart spending habits.',
-    techStack: ['WEB'],
-    status: 'Done',
-    links: [{ label: 'View Website', url: 'https://classresources.ca', type: 'external' }],
-  },
+  
   {
     title: 'Taxes Website',
     description: 'An interactive quiz built to help students test and reinforce their understanding of key financial literacy concepts in a fun, engaging way.',
