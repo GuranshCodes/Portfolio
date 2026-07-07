@@ -8,11 +8,12 @@ import SkillsSection from '@/components/portfolio/SkillsSection';
 import GoalsSection from '@/components/portfolio/GoalsSection';
 import ActivitiesSection from '@/components/portfolio/ActivitiesSection';
 import ContactFooter from '@/components/portfolio/ContactFooter';
+import aboutImage from '../../177470905.png';
 
 const baseUrl = import.meta.env.BASE_URL || '/';
 const HERO_IMAGE = `${baseUrl}images/hero-illustration.svg`;
 const PROJECTS_IMAGE = `${baseUrl}images/projects-illustration.svg`;
-const ABOUT_IMAGE = `${baseUrl}images/about-illustration.svg`;
+const ABOUT_IMAGE = aboutImage;
 
 export default function Home() {
   return (
