@@ -11,7 +11,7 @@ import ContactFooter from '@/components/portfolio/ContactFooter';
 import aboutImage from '../../177470905.png';
 
 const baseUrl = import.meta.env.BASE_URL || '/';
-const HERO_IMAGE = `${baseUrl}images/hero-illustration.svg`;
+const HERO_IMAGE = `${baseUrl}images/unnamed.png`;
 const PROJECTS_IMAGE = `${baseUrl}images/projects-illustration.svg`;
 const ABOUT_IMAGE = aboutImage;
 
