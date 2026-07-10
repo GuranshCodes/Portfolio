@@ -30,16 +30,31 @@
 
 <h2>Features</h2>
 <table align="center">
-  <tr><th>Capability</th><th>Experience</th></tr>
-  <tr><td>Responsive design</td><td>Desktop & mobile optimized</td></tr>
-  <tr><td>Interactive UI</td><td>Smooth Framer Motion animations</td></tr>
-  <tr><td>High Performance</td><td>Built with Vite</td></tr>
-  <tr><td>Clean Styling</td><td>Tailwind CSS integration</td></tr>
+  <tr>
+    <th align="left">Capability</th>
+    <th align="left">Experience</th>
+  </tr>
+  <tr>
+    <td>Responsive design</td>
+    <td>Desktop & mobile optimized</td>
+  </tr>
+  <tr>
+    <td>Interactive UI</td>
+    <td>Smooth Framer Motion animations</td>
+  </tr>
+  <tr>
+    <td>High Performance</td>
+    <td>Built with Vite</td>
+  </tr>
+  <tr>
+    <td>Clean Styling</td>
+    <td>Tailwind CSS integration</td>
+  </tr>
 </table>
 
 <h2>Tech Stack</h2>
 <div align="center">
-<img src="https://skillicons.dev/icons?i=react,vite,js,tailwind,framer,vscode,git,github"/>
+  <img src="https://skillicons.dev/icons?i=react,vite,js,tailwind,framer,vscode,git,github"/>
 </div>
 
 <h2>Project Structure</h2>
@@ -61,9 +76,9 @@ npm run dev</code></pre>
 
 <h2>Repository Activity</h2>
 <div align="center">
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=GuranshCodes&show_icons=true&theme=tokyonight"/>
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=GuranshCodes&theme=tokyonight"/>
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=GuranshCodes&theme=tokyo-night"/>
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=GuranshCodes&show_icons=true&theme=tokyonight"/>
+  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=GuranshCodes&theme=tokyonight"/>
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=GuranshCodes&theme=tokyo-night"/>
 </div>
 
 <h2>Contact</h2>
@@ -73,6 +88,6 @@ npm run dev</code></pre>
 </ul>
 
 <div align="center">
-<p>Built by <b>GuranshCodes</b></p>
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=180&color=gradient"/>
+  <p>Built by <b>GuranshCodes</b></p>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=180&color=gradient"/>
 </div>
